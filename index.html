@@ -28,33 +28,26 @@
 		<div class="article">
 			<h2>Vení a conocerla...</h2>	
 
-			<img id="imagen" class="img" src="./css/Fotos/cs.jpeg">
-
-			<button type="button" onclick="previmg()"><<<<<</button>
-			<script src="cabañasuiza.js"></script>
-
-			<button type="button" onclick="nextimg()">>>>>></button>
-			<script src="cabañasuiza.js"></script>
+			<img class="img" src="./css/Fotos/cs.jpeg">
+			<button class="back"><<<<<</button>			
+			<button class="next">>>>>></button>
 			
 			
-			<p  id="art" class="textarticle">
+			<p  class="textarticle">
 				Ubicada en un lugar privilegiado de la precordillera mendocina, alejada de la ciudad pero 	cerca de todo lo necesario para tu esparcimiento, recreación y comodidad. <br/>Hermosas vistas, 	múltiples circuitos de senderismo en los alrededores, se encuentra a sólo pasos del Río Mendoza, Cacheuta y Dique Potrerillos.<br/><br/>
 				Posee capacidad para 5 personas, cuenta con 2 dormitorios, uno con cama matrimonial y otro 	con 3 camas de una plaza, baño, cocina comedor, hogar a leña, espacioso quincho con 	churrasquera, amplio parque y piscina. Ofrece WiFi, TV por cable, aires acondicionados frío/calor, ropa de cama y cocina totalmente equipada.
 				Además podrás disfrutar enteramente de la propiedad, manteniendo tu privacidad y seguridad.				
 			</p>
-			<button type="button" onclick="changeart()">Change article</button>
-			<script src="./js/cabañasuiza.js"></script>
-			<button type="button" onclick="changeart1()">Return article</button>
-			<script src="./js/cabañasuiza.js"></script>
 
+			
 		</div>
 		<div class="aside">
 			<a class="link-1" href="./pages/galeria.html">
 			<p class="paside">Galería de imágenes</p>
 			<br/>
-			<img src="./css/Fotos/CSpaisaje1.jpeg" alt="Paisaje">
-			<img src="./css/Fotos/CSparque1.jpeg" alt="Parque">
-			<img src="./css/Fotos/CSparque2.jpeg" alt="Parque">
+			<img src="./css/Fotos/csp1.jpeg" alt="Paisaje">
+			<img src="./css/Fotos/csp2.jpeg" alt="Parque">
+			<img src="./css/Fotos/csp3.jpeg" alt="Parque">
 			<img src="./css/Fotos/CSpileta.jpeg" alt="Pileta">
 			<img src="./css/Fotos/CSquincho1.jpeg" alt="Quincho">
 			<img src="./css/Fotos/CSquincho2.jpeg" alt="Quincho">
@@ -65,21 +58,27 @@
 			<img src="./css/Fotos/CScuartomatrimonial.jpeg" alt="cuarto">
 			<img src="./css/Fotos/CScuarto.jpeg" alt="cuarto"></a>
 			<a class="link-2" href="https://www.google.com/maps/place/33%C2%B002'43.0%22S+69%C2%B003'55.2%22W/@-33.0452841,-69.0675321,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xc397bd1814c19dab!8m2!3d-33.0452841!4d-69.0653434?hl=es" target="_BLANK"><p class="paside">Ubicación</p></a>
-			<a class="link-3" href=""><p class="paside">Lugares a visitar</p></a>
-			<b class="listadesp">
-				<li>Río Mendoza</li>
-				<li>Senderismo</li>
-				<li>Rincón suizo</li>
-				<li>Pimienta Negra</li>
-			</b>	
+			<ul class="listadesp">Lugares a visitar
+				<select name="" id="">
+					<option value="">Río Mendoza</option>
+					<option value="">Cascada de los Berros</option>
+					<option value="">Rincón Suizo</option>
+					<option value="">Pimienta Negra</option>
+					<option value="">Entre Dos</option>
+					<option value="">Dique Potrerillos</option>
+					<option value="">Cacheuta</option>
+					<option value="">Cerro Camello</option>
+				</select>
+			</ul>	
 			<a class="link-4" href=""><p class="paside">Contactos</p></a>
 		</div>
 		<div class="footer">				 
-			<b class=footer-item1><img class="imgwa" src="./css/Fotos/wa.jpg"><br/>+5492615379812</b>
-			<b class="footer-item3"><img class="imgmail" src="./css/Fotos/mail.png"><br/>chamorrolmariano@gmail.com</b>
+			<a href="tel: 2615379812" class=footer-item1><img class="imgwa" src="./css/Fotos/wa.jpg"><br/>+5492615379812</a>
+			<a href="mailto: chamorrolmariano@gmail.com" class="footer-item3"><img class="imgmail" src="./css/Fotos/mail.png"><br/>chamorrolmariano@gmail.com</a>
 			<a href="https://instagram.com/cabaniasuiza?utm_medium=copy_link" target="_BLANK" class="footer-item2">
 			<img class="imginst" src="./css/Fotos/inst.png"></a>			 	
 		</div>
 	</div>
+	<script type="text/javascript" src="./js/cabañasuiza.js"></script>
 </body>
 </html>

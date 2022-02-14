@@ -1,28 +1,38 @@
-function changeart() {
-	document.getElementById("art").innerHTML = "Otro párrafo";
+
+let imagenes = [ "./css/Fotos/cs.jpeg", "./css/Fotos/csp2.jpeg", "./css/Fotos/csp3.jpeg"];
+cont = 0;
+
+function carrousel(contenedor){
+	contenedor.addEventListener("click", e=>{
+		let atras = contenedor.querySelector('.back'),
+		adelante = contenedor.querySelector('.next'),
+		img = contenedor.querySelector('.img'),
+		tgt = e.target;
+
+		if (tgt == atras){
+			if(cont > 0){
+				img.src = imagenes[cont - 1];
+				cont--;
+			}
+			else{
+				img.src = imagenes[imagenes.length - 1];
+				cont = imagenes.length-1;
+			}
+		}else if (tgt == adelante){
+			if(cont < imagenes.length-1){
+				img.src = imagenes[cont + 1];
+				cont++;
+			}
+			else{
+				img.src = imagenes[0];
+				cont = 0;
+			}
+		}
+	});
 }
 
-
-function changeart1() {
-	document.getElementById("art").innerHTML = `Ubicada en un lugar privilegiado de la precordillera mendocina, alejada de la ciudad pero 	cerca de todo lo necesario para tu esparcimiento, recreación y comodidad. <br/>Hermosas vistas, 	múltiples circuitos de senderismo en los alrededores, se encuentra a sólo pasos del Río Mendoza, Cacheuta y Dique Potrerillos.<br/><br/>
-				Posee capacidad para 5 personas, cuenta con 2 dormitorios, uno con cama matrimonial y otro 	con 3 camas de una plaza, baño, cocina comedor, hogar a leña, espacioso quincho con 	churrasquera, amplio parque y piscina. Ofrece WiFi, TV por cable, aires acondicionados frío/calor, ropa de cama y cocina totalmente equipada.
-				Además podrás disfrutar enteramente de la propiedad, manteniendo tu privacidad y seguridad.`;
-}
-
-let img = [ "csp1.jpeg", "csp2.jpeg"];
-
-
-function previmg() {
-	for (imagen of img){
-		
-		document.getElementById("imagen").src = imagen ;
-}
-	}
-	
-	
-
-function nextimg() {
-	document.getElementById("imagen").src = "cs.jpeg";
-}
-
+document.addEventListener("DOMContentLoaded", ()=>{
+	let contenedor = document.querySelector('.article');
+	carrousel(contenedor);
+})
 
