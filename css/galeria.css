@@ -76,7 +76,7 @@ body{
 	margin: 10px auto;
 	font-family: 'Mochiy Pop P One', sans-serif;
 	border-radius: 5%;
-	box box-shadow: 50px 50px 50px 0 #522;
+	box-shadow: 50px 50px 50px 0 #522;
 	background-image: radial-gradient(black, white, black);
 	display: grid;
 	grid-template-rows: repeat(12, auto);
@@ -160,3 +160,10 @@ a{
 	border: 2px solid #9f0000;
 }
 
+@media screen and (max-width: 1110px){
+	.contenedor{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
